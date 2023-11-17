@@ -1,2 +1,5 @@
-# Order-summary-component
-This repository for solving "Order summary component" challenge from Front-End Mentor challenges.
+# Frontend Mentor - Order summary card
+
+![Design preview for the Order summary card coding challenge](./design/desktop-preview.jpg)
+
+## Welcome! 👋

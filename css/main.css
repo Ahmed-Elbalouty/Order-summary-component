@@ -1,0 +1,132 @@
+/* Start Variables */
+:root{
+    /* Primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    /* Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+/* End Variables */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 14px;
+}
+.container{
+    min-height: 100vh;
+    background-color: var(--Pale-blue);
+    display: grid;
+    place-content: center;
+}
+@media (max-width: 767px) {
+    .container{
+        background-image: url(../images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+@media (min-width: 992px) {
+    .container{
+        background-image: url(../images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+    }
+}
+.parent{
+    width: 450px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.parent .image img{
+    width: 100%;
+}
+.parent .content{
+    padding: 20px 50px;
+}
+.parent .content h2{
+    font-size: 25px;
+    text-align: center;
+    color: var(--Dark-blue);
+    margin: 5px 0 15px 0;
+}
+.parent .content p{
+    color: var(--Desaturated-blue);
+    text-align: center;
+    font-size: 16px;
+}
+.parent .content .special{
+    background-color: var(--Very-pale-blue);
+    padding: 20px;
+    margin: 15px 0 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.parent .content .special .price{
+    display: flex;
+    flex-direction: column;
+}
+.parent .content .special .price span:first-of-type{
+    color: var(--Dark-blue);
+    font-weight: bold;
+}
+.parent .content .special .price span:last-of-type{
+    color: var(--Desaturated-blue);
+}
+.parent .content .special a{
+    display: block;
+    margin-left: auto; 
+    color: var(--Bright-blue);
+    transition: .3s;
+}
+.parent .content .special a:hover{
+    text-decoration: none;
+    color: hsl(245, 75%, 52%, .7);
+}
+.parent .content button.proceed{
+    display: block;
+    width: 100%;
+    color: white;
+    border: none;
+    background-color: var(--Bright-blue);
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 5px 15px var(--Bright-blue);
+}
+.parent .content button.proceed:hover{
+    background-color: hsl(245, 75%, 52%, .8);
+}
+.parent .content button.cancel{
+    display: block;
+    width: 100%;
+    color: var(--Desaturated-blue);
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+    cursor: pointer;
+    transition: .3s;
+}
+.parent .content button.cancel:hover{
+    color: var(--Dark-blue);
+}
+/* Mobile Devices */
+@media (max-width: 767px) {
+    .parent{
+        width: 350px;
+        margin: 15px auto;
+    }
+    .parent .content{
+        padding: 20px 40px;
+    }
+}
